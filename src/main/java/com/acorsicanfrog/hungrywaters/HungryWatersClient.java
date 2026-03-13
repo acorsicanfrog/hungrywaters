@@ -1,5 +1,6 @@
 package com.acorsicanfrog.hungrywaters;
 
+import com.acorsicanfrog.hungrywaters.client.PiranhaModel;
 import com.acorsicanfrog.hungrywaters.client.PiranhaRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -21,6 +22,11 @@ public class HungryWatersClient {
         @SubscribeEvent
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerEntityRenderer(HungryWaters.PIRANHA.get(), PiranhaRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void onRegisterLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(PiranhaModel.LAYER_LOCATION, PiranhaModel::createBodyLayer);
         }
     }
 }
