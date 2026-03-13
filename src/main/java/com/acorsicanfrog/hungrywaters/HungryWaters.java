@@ -9,7 +9,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -40,9 +39,9 @@ public class HungryWaters {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(Registries.ENTITY_TYPE, MODID);
 
     public static final DeferredHolder<EntityType<?>, EntityType<PiranhaEntity>> PIRANHA = ENTITY_TYPES.register("piranha",
-            () -> EntityType.Builder.of(PiranhaEntity::new, MobCategory.WATER_CREATURE)
+            () -> EntityType.Builder.of(PiranhaEntity::new, MobCategory.WATER_AMBIENT)
                     .sized(0.5F, 0.3F)
-                    .clientTrackingRange(4)
+                    .clientTrackingRange(8)
                     .build("piranha"));
 
     // Items
@@ -78,7 +77,7 @@ public class HungryWaters {
                     PIRANHA.get(),
                     SpawnPlacementTypes.IN_WATER,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                    WaterAnimal::checkSurfaceWaterAnimalSpawnRules,
+                    PiranhaEntity::checkSpawnRules,
                     RegisterSpawnPlacementsEvent.Operation.AND
             );
         }

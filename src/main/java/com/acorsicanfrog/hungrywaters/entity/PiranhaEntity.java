@@ -2,6 +2,8 @@ package com.acorsicanfrog.hungrywaters.entity;
 
 import com.acorsicanfrog.hungrywaters.Config;
 import com.acorsicanfrog.hungrywaters.HungryWaters;
+
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -9,6 +11,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
@@ -55,6 +58,11 @@ public class PiranhaEntity extends AbstractFish {
         this.moveControl = new SmoothSwimmingMoveControl(this, 85, 10, 0.1F, 0.5F, false);
         this.lookControl = new SmoothSwimmingLookControl(this, 10);
     }
+
+    public static boolean checkSpawnRules(EntityType<? extends PiranhaEntity> type, ServerLevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
+    return level.getFluidState(pos).is(net.minecraft.tags.FluidTags.WATER)
+        && level.getBlockState(pos.above()).getFluidState().is(net.minecraft.tags.FluidTags.WATER);
+}
 
     private static final ResourceLocation SCALE_MODIFIER_ID =
             ResourceLocation.fromNamespaceAndPath(HungryWaters.MODID, "piranha_scale");
