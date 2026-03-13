@@ -1,25 +1,34 @@
+# Hungry Waters
 
-Installation information
-=======
+Beware the waters — piranhas have arrived!
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Overview
+This mod introduces a new fish entity: the piranha.
+A school of piranhas will spawn randomly in either swamp biomes, or river biomes. Piranhas have a hunger bar which goes down over time, then they enter hunting mode and will attack anything near them to refill their hunger bar.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+## Features
+- Piranha custom entity
+- Piranha have a hunger bar, when it reaches zero, they will enter into hunting mode and start hunting anything alive nearby (including you)
+- Piranhas will fight back when attacked
+- Piranhas will only spawn in river or swamp water biomes.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Configuration
+The mod includes a configurable file allowing you to:
+- Adjust the bite damage
+- Adjust the swimming speed
+- Adjust the health amount
+- Adjust the size of piranhas (min/max)
+- Adjust the hunger amount
+- Adjust the hunger drain (how fast they become hungry)
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## Datapack
+Spawn frequency and school size can be customized via datapack, as these values are loaded from a biome modifier file.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Compatibility
+Designed for broad compatibility with other animal-related mods.
+Has native support for [Nature's Spirit](https://modrinth.com/mod/natures-spirit) as well as [Biomes O' Plenty](https://modrinth.com/mod/biomes-o-plenty)
+
+
+## Bug report
+
+If you encounter compatibility issues, feel free to report them through [Github](https://github.com/acorsicanfrog/hungrywaters) — I’ll do my best to fix them!
