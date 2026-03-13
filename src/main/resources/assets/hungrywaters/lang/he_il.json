@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "פירנהא",
+  "item.hungrywaters.piranha_spawn_egg": "ביצת הגעלה של פירנהא",
+
+  "hungrywaters.configuration.title": "הגדרות Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "הגדרות Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "הגדרות Hungry Waters",
+  "hungrywaters.configuration.stats": "סטטיסטיקות",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "סטטיסטיקות",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "הגדרות סטטיסטיקות",
+  "hungrywaters.configuration.scaleMin": "גודל מינימלי",
+  "hungrywaters.configuration.scaleMax": "גודל מקסימלי",
+  "hungrywaters.configuration.attackDamage": "נזק התקפה",
+  "hungrywaters.configuration.movementSpeed": "מהירות תנועה",
+  "hungrywaters.configuration.maxHealth": "בריאות מקסימלית",
+  "hungrywaters.configuration.hunger": "רעב",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "רעב",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "הגדרות רעב",
+  "hungrywaters.configuration.hungerMax": "רעב מקסימלי",
+  "hungrywaters.configuration.hungerDrainRate": "קצב התרוקנות הרעב"
+}

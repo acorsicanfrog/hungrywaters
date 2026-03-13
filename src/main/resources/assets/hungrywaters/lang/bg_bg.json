@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Пираня",
+  "item.hungrywaters.piranha_spawn_egg": "Яйце за пораждане на пираня",
+
+  "hungrywaters.configuration.title": "Настройки на Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Настройки на Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Настройки на Hungry Waters",
+  "hungrywaters.configuration.stats": "Статистики",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Статистики",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Настройки на статистиките",
+  "hungrywaters.configuration.scaleMin": "Мин. мащаб",
+  "hungrywaters.configuration.scaleMax": "Макс. мащаб",
+  "hungrywaters.configuration.attackDamage": "Щети от атака",
+  "hungrywaters.configuration.movementSpeed": "Скорост на движение",
+  "hungrywaters.configuration.maxHealth": "Макс. здраве",
+  "hungrywaters.configuration.hunger": "Глад",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Глад",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Настройки на глада",
+  "hungrywaters.configuration.hungerMax": "Макс. глад",
+  "hungrywaters.configuration.hungerDrainRate": "Скорост на изчерпване на глада"
+}

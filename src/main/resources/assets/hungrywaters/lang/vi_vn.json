@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Cá Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Trứng Cá Piranha",
+
+  "hungrywaters.configuration.title": "Cài đặt Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Cài đặt Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Cài đặt Hungry Waters",
+  "hungrywaters.configuration.stats": "Chỉ số",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Chỉ số",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Cài đặt chỉ số",
+  "hungrywaters.configuration.scaleMin": "Tỉ lệ tối thiểu",
+  "hungrywaters.configuration.scaleMax": "Tỉ lệ tối đa",
+  "hungrywaters.configuration.attackDamage": "Sát thương tấn công",
+  "hungrywaters.configuration.movementSpeed": "Tốc độ di chuyển",
+  "hungrywaters.configuration.maxHealth": "Máu tối đa",
+  "hungrywaters.configuration.hunger": "Đói",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Đói",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Cài đặt độ đói",
+  "hungrywaters.configuration.hungerMax": "Độ đói tối đa",
+  "hungrywaters.configuration.hungerDrainRate": "Tốc độ giảm đói"
+}

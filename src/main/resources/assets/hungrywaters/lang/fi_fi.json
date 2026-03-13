@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Piranjan kutumuna",
+
+  "hungrywaters.configuration.title": "Hungry Waters -asetukset",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters -asetukset",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters -asetukset",
+  "hungrywaters.configuration.stats": "Tilastot",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Tilastot",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Tilastojen asetukset",
+  "hungrywaters.configuration.scaleMin": "Min. koko",
+  "hungrywaters.configuration.scaleMax": "Maks. koko",
+  "hungrywaters.configuration.attackDamage": "Hyökkäysvahinko",
+  "hungrywaters.configuration.movementSpeed": "Liikkumisnopeus",
+  "hungrywaters.configuration.maxHealth": "Maks. terveys",
+  "hungrywaters.configuration.hunger": "Nälkä",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Nälkä",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Nälän asetukset",
+  "hungrywaters.configuration.hungerMax": "Maks. nälkä",
+  "hungrywaters.configuration.hungerDrainRate": "Nälän vähenemisvauhti"
+}

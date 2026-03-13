@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Пиранья",
+  "item.hungrywaters.piranha_spawn_egg": "Яйцо призыва пираньи",
+
+  "hungrywaters.configuration.title": "Настройки Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Настройки Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Настройки Hungry Waters",
+  "hungrywaters.configuration.stats": "Характеристики",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Характеристики",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Настройки характеристик",
+  "hungrywaters.configuration.scaleMin": "Мин. размер",
+  "hungrywaters.configuration.scaleMax": "Макс. размер",
+  "hungrywaters.configuration.attackDamage": "Урон от атаки",
+  "hungrywaters.configuration.movementSpeed": "Скорость передвижения",
+  "hungrywaters.configuration.maxHealth": "Макс. здоровье",
+  "hungrywaters.configuration.hunger": "Голод",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Голод",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Настройки голода",
+  "hungrywaters.configuration.hungerMax": "Макс. голод",
+  "hungrywaters.configuration.hungerDrainRate": "Скорость расхода голода"
+}

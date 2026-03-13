@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Piranha tojás",
+
+  "hungrywaters.configuration.title": "Hungry Waters beállítások",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters beállítások",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters beállítások",
+  "hungrywaters.configuration.stats": "Jellemzők",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Jellemzők",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Jellemzők beállításai",
+  "hungrywaters.configuration.scaleMin": "Min. méret",
+  "hungrywaters.configuration.scaleMax": "Max. méret",
+  "hungrywaters.configuration.attackDamage": "Támadási sebzés",
+  "hungrywaters.configuration.movementSpeed": "Mozgási sebesség",
+  "hungrywaters.configuration.maxHealth": "Max. életerő",
+  "hungrywaters.configuration.hunger": "Éhség",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Éhség",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Éhség beállításai",
+  "hungrywaters.configuration.hungerMax": "Max. éhség",
+  "hungrywaters.configuration.hungerDrainRate": "Éhség csökkenési üteme"
+}

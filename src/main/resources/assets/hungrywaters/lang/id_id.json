@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Telur Piranha",
+
+  "hungrywaters.configuration.title": "Konfigurasi Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Konfigurasi Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Konfigurasi Hungry Waters",
+  "hungrywaters.configuration.stats": "Statistik",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Statistik",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Pengaturan Statistik",
+  "hungrywaters.configuration.scaleMin": "Ukuran Min",
+  "hungrywaters.configuration.scaleMax": "Ukuran Maks",
+  "hungrywaters.configuration.attackDamage": "Kerusakan Serangan",
+  "hungrywaters.configuration.movementSpeed": "Kecepatan Gerak",
+  "hungrywaters.configuration.maxHealth": "Kesehatan Maks",
+  "hungrywaters.configuration.hunger": "Kelaparan",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Kelaparan",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Pengaturan Kelaparan",
+  "hungrywaters.configuration.hungerMax": "Kelaparan Maks",
+  "hungrywaters.configuration.hungerDrainRate": "Tingkat Pengosongan Kelaparan"
+}

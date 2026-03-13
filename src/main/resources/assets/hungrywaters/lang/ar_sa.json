@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "بيرانا",
+  "item.hungrywaters.piranha_spawn_egg": "بيضة بيرانا",
+
+  "hungrywaters.configuration.title": "إعدادات Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "إعدادات Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "إعدادات Hungry Waters",
+  "hungrywaters.configuration.stats": "الإحصاءات",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "الإحصاءات",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "إعدادات الإحصاءات",
+  "hungrywaters.configuration.scaleMin": "الحجم الأدنى",
+  "hungrywaters.configuration.scaleMax": "الحجم الأقصى",
+  "hungrywaters.configuration.attackDamage": "ضرر الهجوم",
+  "hungrywaters.configuration.movementSpeed": "سرعة الحركة",
+  "hungrywaters.configuration.maxHealth": "الصحة القصوى",
+  "hungrywaters.configuration.hunger": "الجوع",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "الجوع",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "إعدادات الجوع",
+  "hungrywaters.configuration.hungerMax": "أقصى جوع",
+  "hungrywaters.configuration.hungerDrainRate": "معدل استنزاف الجوع"
+}

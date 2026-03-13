@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Πιράνχα",
+  "item.hungrywaters.piranha_spawn_egg": "Αυγό γέννησης Πιράνχα",
+
+  "hungrywaters.configuration.title": "Ρυθμίσεις Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Ρυθμίσεις Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Ρυθμίσεις Hungry Waters",
+  "hungrywaters.configuration.stats": "Στατιστικά",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Στατιστικά",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Ρυθμίσεις στατιστικών",
+  "hungrywaters.configuration.scaleMin": "Ελάχιστη κλίμακα",
+  "hungrywaters.configuration.scaleMax": "Μέγιστη κλίμακα",
+  "hungrywaters.configuration.attackDamage": "Ζημιά επίθεσης",
+  "hungrywaters.configuration.movementSpeed": "Ταχύτητα κίνησης",
+  "hungrywaters.configuration.maxHealth": "Μέγιστη υγεία",
+  "hungrywaters.configuration.hunger": "Πείνα",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Πείνα",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Ρυθμίσεις πείνας",
+  "hungrywaters.configuration.hungerMax": "Μέγιστη πείνα",
+  "hungrywaters.configuration.hungerDrainRate": "Ρυθμός εξάντλησης πείνας"
+}

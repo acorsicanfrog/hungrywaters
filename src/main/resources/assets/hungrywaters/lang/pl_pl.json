@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Pirania",
+  "item.hungrywaters.piranha_spawn_egg": "Jajo spawnu piranii",
+
+  "hungrywaters.configuration.title": "Konfiguracja Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Konfiguracja Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Konfiguracja Hungry Waters",
+  "hungrywaters.configuration.stats": "Statystyki",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Statystyki",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Ustawienia statystyk",
+  "hungrywaters.configuration.scaleMin": "Min. skala",
+  "hungrywaters.configuration.scaleMax": "Maks. skala",
+  "hungrywaters.configuration.attackDamage": "Obrażenia od ataku",
+  "hungrywaters.configuration.movementSpeed": "Prędkość ruchu",
+  "hungrywaters.configuration.maxHealth": "Maks. zdrowie",
+  "hungrywaters.configuration.hunger": "Głód",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Głód",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Ustawienia głodu",
+  "hungrywaters.configuration.hungerMax": "Maks. głód",
+  "hungrywaters.configuration.hungerDrainRate": "Tempo wyczerpywania głodu"
+}

@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "피라냐",
+  "item.hungrywaters.piranha_spawn_egg": "피라냐 생성 알",
+
+  "hungrywaters.configuration.title": "Hungry Waters 설정",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters 설정",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters 설정",
+  "hungrywaters.configuration.stats": "능력치",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "능력치",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "능력치 설정",
+  "hungrywaters.configuration.scaleMin": "최소 크기",
+  "hungrywaters.configuration.scaleMax": "최대 크기",
+  "hungrywaters.configuration.attackDamage": "공격 피해",
+  "hungrywaters.configuration.movementSpeed": "이동 속도",
+  "hungrywaters.configuration.maxHealth": "최대 체력",
+  "hungrywaters.configuration.hunger": "배고픔",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "배고픔",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "배고픔 설정",
+  "hungrywaters.configuration.hungerMax": "최대 배고픔",
+  "hungrywaters.configuration.hungerDrainRate": "배고픔 소모 속도"
+}

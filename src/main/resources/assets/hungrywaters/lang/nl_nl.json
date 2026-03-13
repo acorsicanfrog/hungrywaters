@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Piranha-spawei",
+
+  "hungrywaters.configuration.title": "Hungry Waters Instellingen",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters Instellingen",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters Instellingen",
+  "hungrywaters.configuration.stats": "Statistieken",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Statistieken",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Statistiekinstellingen",
+  "hungrywaters.configuration.scaleMin": "Min. schaal",
+  "hungrywaters.configuration.scaleMax": "Max. schaal",
+  "hungrywaters.configuration.attackDamage": "Aanvalsschade",
+  "hungrywaters.configuration.movementSpeed": "Bewegingssnelheid",
+  "hungrywaters.configuration.maxHealth": "Max. gezondheid",
+  "hungrywaters.configuration.hunger": "Honger",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Honger",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Hongerinstellingen",
+  "hungrywaters.configuration.hungerMax": "Max. honger",
+  "hungrywaters.configuration.hungerDrainRate": "Hongerafnamesnelheid"
+}

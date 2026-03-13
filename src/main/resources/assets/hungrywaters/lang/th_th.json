@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "ปิรันยา",
+  "item.hungrywaters.piranha_spawn_egg": "ไข่สร้างปิรันยา",
+
+  "hungrywaters.configuration.title": "การตั้งค่า Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "การตั้งค่า Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "การตั้งค่า Hungry Waters",
+  "hungrywaters.configuration.stats": "สถิติ",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "สถิติ",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "การตั้งค่าสถิติ",
+  "hungrywaters.configuration.scaleMin": "ขนาดต่ำสุด",
+  "hungrywaters.configuration.scaleMax": "ขนาดสูงสุด",
+  "hungrywaters.configuration.attackDamage": "ความเสียหายจากการโจมตี",
+  "hungrywaters.configuration.movementSpeed": "ความเร็วในการเคลื่อนที่",
+  "hungrywaters.configuration.maxHealth": "พลังชีวิตสูงสุด",
+  "hungrywaters.configuration.hunger": "ความหิว",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "ความหิว",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "การตั้งค่าความหิว",
+  "hungrywaters.configuration.hungerMax": "ความหิวสูงสุด",
+  "hungrywaters.configuration.hungerDrainRate": "อัตราการลดลงของความหิว"
+}

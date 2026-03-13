@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Піранья",
+  "item.hungrywaters.piranha_spawn_egg": "Яйце виклику піраньї",
+
+  "hungrywaters.configuration.title": "Налаштування Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Налаштування Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Налаштування Hungry Waters",
+  "hungrywaters.configuration.stats": "Характеристики",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Характеристики",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Налаштування характеристик",
+  "hungrywaters.configuration.scaleMin": "Мін. розмір",
+  "hungrywaters.configuration.scaleMax": "Макс. розмір",
+  "hungrywaters.configuration.attackDamage": "Шкода від атаки",
+  "hungrywaters.configuration.movementSpeed": "Швидкість руху",
+  "hungrywaters.configuration.maxHealth": "Макс. здоров'я",
+  "hungrywaters.configuration.hunger": "Голод",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Голод",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Налаштування голоду",
+  "hungrywaters.configuration.hungerMax": "Макс. голод",
+  "hungrywaters.configuration.hungerDrainRate": "Швидкість витрати голоду"
+}

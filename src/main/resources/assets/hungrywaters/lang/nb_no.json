@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piraya",
+  "item.hungrywaters.piranha_spawn_egg": "Piraya-egg",
+
+  "hungrywaters.configuration.title": "Hungry Waters-innstillinger",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters-innstillinger",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters-innstillinger",
+  "hungrywaters.configuration.stats": "Statistikk",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Statistikk",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Statistikkinnstillinger",
+  "hungrywaters.configuration.scaleMin": "Min. størrelse",
+  "hungrywaters.configuration.scaleMax": "Maks. størrelse",
+  "hungrywaters.configuration.attackDamage": "Angrepsskade",
+  "hungrywaters.configuration.movementSpeed": "Bevegelseshastighet",
+  "hungrywaters.configuration.maxHealth": "Maks. helse",
+  "hungrywaters.configuration.hunger": "Sult",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Sult",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Sultinnstillinger",
+  "hungrywaters.configuration.hungerMax": "Maks. sult",
+  "hungrywaters.configuration.hungerDrainRate": "Sulttømmingsrate"
+}

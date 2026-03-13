@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Piranha Doğurma Yumurtası",
+
+  "hungrywaters.configuration.title": "Hungry Waters Yapılandırması",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters Yapılandırması",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters Yapılandırması",
+  "hungrywaters.configuration.stats": "İstatistikler",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "İstatistikler",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "İstatistik Ayarları",
+  "hungrywaters.configuration.scaleMin": "Min. Boyut",
+  "hungrywaters.configuration.scaleMax": "Maks. Boyut",
+  "hungrywaters.configuration.attackDamage": "Saldırı Hasarı",
+  "hungrywaters.configuration.movementSpeed": "Hareket Hızı",
+  "hungrywaters.configuration.maxHealth": "Maks. Can",
+  "hungrywaters.configuration.hunger": "Açlık",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Açlık",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Açlık Ayarları",
+  "hungrywaters.configuration.hungerMax": "Maks. Açlık",
+  "hungrywaters.configuration.hungerDrainRate": "Açlık Tükenme Hızı"
+}

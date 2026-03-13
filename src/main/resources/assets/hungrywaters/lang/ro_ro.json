@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Ou de generare piranha",
+
+  "hungrywaters.configuration.title": "Configurare Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Configurare Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Configurare Hungry Waters",
+  "hungrywaters.configuration.stats": "Statistici",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Statistici",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Setări statistici",
+  "hungrywaters.configuration.scaleMin": "Scară minimă",
+  "hungrywaters.configuration.scaleMax": "Scară maximă",
+  "hungrywaters.configuration.attackDamage": "Daune de atac",
+  "hungrywaters.configuration.movementSpeed": "Viteză de mișcare",
+  "hungrywaters.configuration.maxHealth": "Viață maximă",
+  "hungrywaters.configuration.hunger": "Foame",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Foame",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Setări foame",
+  "hungrywaters.configuration.hungerMax": "Foame maximă",
+  "hungrywaters.configuration.hungerDrainRate": "Rată de scădere a foamei"
+}

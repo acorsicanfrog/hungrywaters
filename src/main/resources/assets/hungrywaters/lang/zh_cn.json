@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "食人鱼",
+  "item.hungrywaters.piranha_spawn_egg": "食人鱼刷怪蛋",
+
+  "hungrywaters.configuration.title": "饥饿水域配置",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "饥饿水域配置",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "饥饿水域配置",
+  "hungrywaters.configuration.stats": "属性",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "属性",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "属性设置",
+  "hungrywaters.configuration.scaleMin": "最小体型",
+  "hungrywaters.configuration.scaleMax": "最大体型",
+  "hungrywaters.configuration.attackDamage": "攻击伤害",
+  "hungrywaters.configuration.movementSpeed": "移动速度",
+  "hungrywaters.configuration.maxHealth": "最大生命值",
+  "hungrywaters.configuration.hunger": "饥饿",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "饥饿",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "饥饿设置",
+  "hungrywaters.configuration.hungerMax": "最大饥饿值",
+  "hungrywaters.configuration.hungerDrainRate": "饥饿消耗速率"
+}

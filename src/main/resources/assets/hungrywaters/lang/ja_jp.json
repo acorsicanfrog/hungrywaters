@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "ピラニア",
+  "item.hungrywaters.piranha_spawn_egg": "ピラニアのスポーンエッグ",
+
+  "hungrywaters.configuration.title": "Hungry Waters 設定",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters 設定",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters 設定",
+  "hungrywaters.configuration.stats": "ステータス",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "ステータス",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "ステータス設定",
+  "hungrywaters.configuration.scaleMin": "最小スケール",
+  "hungrywaters.configuration.scaleMax": "最大スケール",
+  "hungrywaters.configuration.attackDamage": "攻撃ダメージ",
+  "hungrywaters.configuration.movementSpeed": "移動速度",
+  "hungrywaters.configuration.maxHealth": "最大体力",
+  "hungrywaters.configuration.hunger": "空腹",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "空腹",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "空腹設定",
+  "hungrywaters.configuration.hungerMax": "最大空腹値",
+  "hungrywaters.configuration.hungerDrainRate": "空腹消費速度"
+}

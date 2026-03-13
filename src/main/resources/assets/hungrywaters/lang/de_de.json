@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Piranha-Spawn-Ei",
+
+  "hungrywaters.configuration.title": "Hungry Waters Konfiguration",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters Konfiguration",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Hungry Waters Konfiguration",
+  "hungrywaters.configuration.stats": "Werte",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Werte",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Werte-Einstellungen",
+  "hungrywaters.configuration.scaleMin": "Min. Größe",
+  "hungrywaters.configuration.scaleMax": "Max. Größe",
+  "hungrywaters.configuration.attackDamage": "Angriffsstärke",
+  "hungrywaters.configuration.movementSpeed": "Bewegungsgeschwindigkeit",
+  "hungrywaters.configuration.maxHealth": "Max. Gesundheit",
+  "hungrywaters.configuration.hunger": "Hunger",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Hunger",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Hunger-Einstellungen",
+  "hungrywaters.configuration.hungerMax": "Max. Hunger",
+  "hungrywaters.configuration.hungerDrainRate": "Hungerabnahmerate"
+}

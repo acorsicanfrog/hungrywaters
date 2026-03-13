@@ -1,0 +1,21 @@
+{
+  "entity.hungrywaters.piranha": "Piranha",
+  "item.hungrywaters.piranha_spawn_egg": "Vajce piranhe",
+
+  "hungrywaters.configuration.title": "Konfigurácia Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml": "Konfigurácia Hungry Waters",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.title": "Konfigurácia Hungry Waters",
+  "hungrywaters.configuration.stats": "Štatistiky",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats": "Štatistiky",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.stats.title": "Nastavenia štatistík",
+  "hungrywaters.configuration.scaleMin": "Min. veľkosť",
+  "hungrywaters.configuration.scaleMax": "Max. veľkosť",
+  "hungrywaters.configuration.attackDamage": "Poškodenie útoku",
+  "hungrywaters.configuration.movementSpeed": "Rýchlosť pohybu",
+  "hungrywaters.configuration.maxHealth": "Max. zdravie",
+  "hungrywaters.configuration.hunger": "Hlad",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Hlad",
+  "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Nastavenia hladu",
+  "hungrywaters.configuration.hungerMax": "Max. hlad",
+  "hungrywaters.configuration.hungerDrainRate": "Rýchlosť ubúdania hladu"
+}
