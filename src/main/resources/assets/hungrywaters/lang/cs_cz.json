@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Nastavení hladu",
   "hungrywaters.configuration.hungerMax": "Max. hlad",
   "hungrywaters.configuration.hungerDrainRate": "Rychlost ubývání hladu",
-  "hungrywaters.configuration.alwaysAggressive": "Vždy agresivní"
+  "hungrywaters.configuration.alwaysAggressive": "Vždy agresivní",
+  "hungrywaters.configuration.randomStartHunger": "Náhodný počáteční hlad"
 }

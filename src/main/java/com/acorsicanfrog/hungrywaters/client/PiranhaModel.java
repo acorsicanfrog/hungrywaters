@@ -22,8 +22,10 @@ public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
     private static final Vector3f ANIM_VEC = new Vector3f();
 
     // Tweak these to match Blockbench preview
-    private static final float ANIM_SPEED_DEFAULT = 2.0F;
+    private static final float ANIM_SPEED_IDLE = 1.0F;
+    private static final float ANIM_SPEED_SWIM = 2.0F;
     private static final float ANIM_SPEED_ATTACK = 4.0F;
+    
     private static final float ANIM_SCALE = 1.5F;
 
     private final ModelPart root;
@@ -97,7 +99,9 @@ public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
     public void setupAnim(PiranhaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root().getAllParts().forEach(ModelPart::resetPose);
 
-        animateScaled(entity.swimDefaultAnimationState, PiranhaAnimation.SWIM_DEFAULT, ageInTicks, ANIM_SPEED_DEFAULT, ANIM_SCALE);
+        float defaultSpeed = Mth.lerp(Math.min(limbSwingAmount * 5.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
+        
+        animateScaled(entity.swimDefaultAnimationState, PiranhaAnimation.SWIM_DEFAULT, ageInTicks, defaultSpeed, ANIM_SCALE);
         animateScaled(entity.swimAttackAnimationState, PiranhaAnimation.SWIM_ATTACK, ageInTicks, ANIM_SPEED_ATTACK, ANIM_SCALE);
 
         // Flop on land

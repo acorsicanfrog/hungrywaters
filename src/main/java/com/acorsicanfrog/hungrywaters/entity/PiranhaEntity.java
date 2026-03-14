@@ -124,6 +124,13 @@ public class PiranhaEntity extends AbstractFish {
             );
         }
 
+        // Apply random start hunger if configured
+        if (Config.RANDOM_START_HUNGER.getAsBoolean()) {
+            setHunger(this.random.nextInt(Config.HUNGER_MAX.getAsInt() + 1));
+        } else {
+            setHunger(Config.HUNGER_MAX.getAsInt());
+        }
+
         return data;
     }
 

@@ -16,6 +16,7 @@ public class Config {
     public static final ModConfigSpec.BooleanValue ALWAYS_AGGRESSIVE;
     public static final ModConfigSpec.IntValue HUNGER_MAX;
     public static final ModConfigSpec.IntValue HUNGER_DRAIN_RATE;
+    public static final ModConfigSpec.BooleanValue RANDOM_START_HUNGER;
 
     static final ModConfigSpec SPEC;
 
@@ -57,6 +58,10 @@ public class Config {
         HUNGER_DRAIN_RATE = BUILDER
                 .comment("Amount of hunger drained per second")
                 .defineInRange("hungerDrainRate", 1, 1, 100);
+
+        RANDOM_START_HUNGER = BUILDER
+                .comment("When enabled, piranhas start with a random hunger value instead of the maximum.")
+                .define("randomStartHunger", true);
 
         BUILDER.pop();
 

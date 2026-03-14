@@ -7,7 +7,7 @@
   "spawners": {
     "type": "hungrywaters:piranha",
     "weight": 8,
-    "minCount": 3,
-    "maxCount": 6
+    "minCount": 4,
+    "maxCount": 8
   }
 }

@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Configurações de Fome",
   "hungrywaters.configuration.hungerMax": "Fome Máxima",
   "hungrywaters.configuration.hungerDrainRate": "Taxa de Drenagem de Fome",
-  "hungrywaters.configuration.alwaysAggressive": "Sempre Agressivo"
+  "hungrywaters.configuration.alwaysAggressive": "Sempre Agressivo",
+  "hungrywaters.configuration.randomStartHunger": "Fome Inicial Aleatória"
 }

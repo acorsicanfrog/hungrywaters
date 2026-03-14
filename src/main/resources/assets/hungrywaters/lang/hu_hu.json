@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Éhség beállításai",
   "hungrywaters.configuration.hungerMax": "Max. éhség",
   "hungrywaters.configuration.hungerDrainRate": "Éhség csökkenési üteme",
-  "hungrywaters.configuration.alwaysAggressive": "Mindig agresszív"
+  "hungrywaters.configuration.alwaysAggressive": "Mindig agresszív",
+  "hungrywaters.configuration.randomStartHunger": "Véletlenszerű kezdeti éhség"
 }

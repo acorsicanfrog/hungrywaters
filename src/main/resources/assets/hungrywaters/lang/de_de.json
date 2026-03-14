@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Hunger-Einstellungen",
   "hungrywaters.configuration.hungerMax": "Max. Hunger",
   "hungrywaters.configuration.hungerDrainRate": "Hungerabnahmerate",
-  "hungrywaters.configuration.alwaysAggressive": "Immer aggressiv"
+  "hungrywaters.configuration.alwaysAggressive": "Immer aggressiv",
+  "hungrywaters.configuration.randomStartHunger": "Zufälliger Starthunger"
 }

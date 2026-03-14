@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "הגדרות רעב",
   "hungrywaters.configuration.hungerMax": "רעב מקסימלי",
   "hungrywaters.configuration.hungerDrainRate": "קצב התרוקנות הרעב",
-  "hungrywaters.configuration.alwaysAggressive": "תוקפני תמיד"
+  "hungrywaters.configuration.alwaysAggressive": "תוקפני תמיד",
+  "hungrywaters.configuration.randomStartHunger": "רעב התחלתי אקראי"
 }

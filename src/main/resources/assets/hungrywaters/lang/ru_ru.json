@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Настройки голода",
   "hungrywaters.configuration.hungerMax": "Макс. голод",
   "hungrywaters.configuration.hungerDrainRate": "Скорость расхода голода",
-  "hungrywaters.configuration.alwaysAggressive": "Всегда агрессивен"
+  "hungrywaters.configuration.alwaysAggressive": "Всегда агрессивен",
+  "hungrywaters.configuration.randomStartHunger": "Случайный начальный голод"
 }

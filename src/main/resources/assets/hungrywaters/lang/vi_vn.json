@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Cài đặt độ đói",
   "hungrywaters.configuration.hungerMax": "Độ đói tối đa",
   "hungrywaters.configuration.hungerDrainRate": "Tốc độ giảm đói",
-  "hungrywaters.configuration.alwaysAggressive": "Luôn hung dữ"
+  "hungrywaters.configuration.alwaysAggressive": "Luôn hung dữ",
+  "hungrywaters.configuration.randomStartHunger": "Đói ngẫu nhiên khi xuất hiện"
 }

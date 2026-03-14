@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "空腹設定",
   "hungrywaters.configuration.hungerMax": "最大空腹値",
   "hungrywaters.configuration.hungerDrainRate": "空腹消費速度",
-  "hungrywaters.configuration.alwaysAggressive": "常に攻撃的"
+  "hungrywaters.configuration.alwaysAggressive": "常に攻撃的",
+  "hungrywaters.configuration.randomStartHunger": "ランダム初期空腹値"
 }

@@ -18,5 +18,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Nälän asetukset",
   "hungrywaters.configuration.hungerMax": "Maks. nälkä",
   "hungrywaters.configuration.hungerDrainRate": "Nälän vähenemisvauhti",
-  "hungrywaters.configuration.alwaysAggressive": "Aina aggressiivinen"
+  "hungrywaters.configuration.alwaysAggressive": "Aina aggressiivinen",
+  "hungrywaters.configuration.randomStartHunger": "Satunnainen aloitusnälkä"
 }
