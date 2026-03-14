@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "Piranha",
   "item.hungrywaters.piranha_spawn_egg": "Ou de generare piranha",
+  "item.hungrywaters.piranha_raw": "Piranha crudă",
+  "item.hungrywaters.piranha_cooked": "Piranha gătită",
 
   "hungrywaters.configuration.title": "Configurare Hungry Waters",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Configurare Hungry Waters",

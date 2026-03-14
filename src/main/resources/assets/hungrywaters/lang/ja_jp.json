@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "ピラニア",
   "item.hungrywaters.piranha_spawn_egg": "ピラニアのスポーンエッグ",
+  "item.hungrywaters.piranha_raw": "生ピラニア",
+  "item.hungrywaters.piranha_cooked": "焼きピラニア",
 
   "hungrywaters.configuration.title": "Hungry Waters 設定",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters 設定",

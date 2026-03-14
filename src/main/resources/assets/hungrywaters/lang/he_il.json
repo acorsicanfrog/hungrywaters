@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "פירנהא",
   "item.hungrywaters.piranha_spawn_egg": "ביצת הגעלה של פירנהא",
+  "item.hungrywaters.piranha_raw": "פירנהא נא",
+  "item.hungrywaters.piranha_cooked": "פירנהא מבושלת",
 
   "hungrywaters.configuration.title": "הגדרות Hungry Waters",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "הגדרות Hungry Waters",

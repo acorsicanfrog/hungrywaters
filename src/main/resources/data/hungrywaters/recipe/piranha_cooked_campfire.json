@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "hungrywaters:piranha_raw"
+  },
+  "result": {
+    "id": "hungrywaters:piranha_cooked"
+  },
+  "experience": 0.35,
+  "cookingtime": 600
+}

@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "Piraya",
   "item.hungrywaters.piranha_spawn_egg": "Piraya-spawn-ägg",
+  "item.hungrywaters.piranha_raw": "Rå piraya",
+  "item.hungrywaters.piranha_cooked": "Kokt piraya",
 
   "hungrywaters.configuration.title": "Hungry Waters-inställningar",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters-inställningar",

@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "Cá Piranha",
   "item.hungrywaters.piranha_spawn_egg": "Trứng Cá Piranha",
+  "item.hungrywaters.piranha_raw": "Cá Piranha Sống",
+  "item.hungrywaters.piranha_cooked": "Cá Piranha Nấu Chín",
 
   "hungrywaters.configuration.title": "Cài đặt Hungry Waters",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Cài đặt Hungry Waters",

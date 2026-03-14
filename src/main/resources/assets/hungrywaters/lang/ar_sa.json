@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "بيرانا",
   "item.hungrywaters.piranha_spawn_egg": "بيضة بيرانا",
+  "item.hungrywaters.piranha_raw": "بيرانا نيئة",
+  "item.hungrywaters.piranha_cooked": "بيرانا مطبوخة",
 
   "hungrywaters.configuration.title": "إعدادات Hungry Waters",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "إعدادات Hungry Waters",

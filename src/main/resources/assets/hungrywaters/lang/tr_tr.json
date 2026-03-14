@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "Piranha",
   "item.hungrywaters.piranha_spawn_egg": "Piranha Doğurma Yumurtası",
+  "item.hungrywaters.piranha_raw": "Çiğ Piranha",
+  "item.hungrywaters.piranha_cooked": "Pişmiş Piranha",
 
   "hungrywaters.configuration.title": "Hungry Waters Yapılandırması",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters Yapılandırması",

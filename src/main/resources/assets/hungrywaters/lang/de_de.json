@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "Piranha",
   "item.hungrywaters.piranha_spawn_egg": "Piranha-Spawn-Ei",
+  "item.hungrywaters.piranha_raw": "Roher Piranha",
+  "item.hungrywaters.piranha_cooked": "Gebratener Piranha",
 
   "hungrywaters.configuration.title": "Hungry Waters Konfiguration",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters Konfiguration",

@@ -30,12 +30,10 @@ public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
 
     private final ModelPart root;
     private final ModelPart bone;
-    private final ModelPart Backbody;
 
     public PiranhaModel(ModelPart root) {
         this.root = root;
         this.bone = root.getChild("bone");
-        this.Backbody = this.bone.getChild("Backbody");
     }
 
     public static LayerDefinition createBodyLayer() {

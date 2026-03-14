@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "食人魚",
   "item.hungrywaters.piranha_spawn_egg": "食人魚生成蛋",
+  "item.hungrywaters.piranha_raw": "生食人魚",
+  "item.hungrywaters.piranha_cooked": "熟食人魚",
 
   "hungrywaters.configuration.title": "Hungry Waters 設定",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters 設定",

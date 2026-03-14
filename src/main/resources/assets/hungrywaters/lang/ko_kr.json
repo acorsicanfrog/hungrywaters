@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "피라냐",
   "item.hungrywaters.piranha_spawn_egg": "피라냐 생성 알",
+  "item.hungrywaters.piranha_raw": "날 피라냐",
+  "item.hungrywaters.piranha_cooked": "익힌 피라냐",
 
   "hungrywaters.configuration.title": "Hungry Waters 설정",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters 설정",

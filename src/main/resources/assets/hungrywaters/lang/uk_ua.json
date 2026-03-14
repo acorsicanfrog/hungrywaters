@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "Піранья",
   "item.hungrywaters.piranha_spawn_egg": "Яйце виклику піраньї",
+  "item.hungrywaters.piranha_raw": "Сира піранья",
+  "item.hungrywaters.piranha_cooked": "Смажена піранья",
 
   "hungrywaters.configuration.title": "Налаштування Hungry Waters",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Налаштування Hungry Waters",

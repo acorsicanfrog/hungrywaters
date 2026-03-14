@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "Piranha",
   "item.hungrywaters.piranha_spawn_egg": "Piranjan kutumuna",
+  "item.hungrywaters.piranha_raw": "Raaka piranha",
+  "item.hungrywaters.piranha_cooked": "Kypsennetty piranha",
 
   "hungrywaters.configuration.title": "Hungry Waters -asetukset",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "Hungry Waters -asetukset",

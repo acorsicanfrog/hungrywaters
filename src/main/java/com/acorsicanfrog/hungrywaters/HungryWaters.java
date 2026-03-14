@@ -9,6 +9,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -50,6 +51,18 @@ public class HungryWaters {
     public static final DeferredHolder<Item, DeferredSpawnEggItem> PIRANHA_SPAWN_EGG = ITEMS.register("piranha_spawn_egg",
             () -> new DeferredSpawnEggItem(PIRANHA, 0x4A6741, 0xC94040, new Item.Properties()));
 
+    public static final DeferredHolder<Item, Item> RAW_PIRANHA = ITEMS.register("piranha_raw",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationModifier(0.1F)
+                    .build())));
+
+    public static final DeferredHolder<Item, Item> COOKED_PIRANHA = ITEMS.register("piranha_cooked",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationModifier(0.6F)
+                    .build())));
+
     public HungryWaters(IEventBus modEventBus, ModContainer modContainer) {
         ENTITY_TYPES.register(modEventBus);
         ITEMS.register(modEventBus);
@@ -88,6 +101,18 @@ public class HungryWaters {
                 event.insertAfter(
                         new ItemStack(Items.PIGLIN_BRUTE_SPAWN_EGG),
                         new ItemStack(PIRANHA_SPAWN_EGG.get()),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+                );
+            }
+            if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+                event.insertAfter(
+                        new ItemStack(Items.COOKED_SALMON),
+                        new ItemStack(RAW_PIRANHA.get()),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+                );
+                event.insertAfter(
+                        new ItemStack(RAW_PIRANHA.get()),
+                        new ItemStack(COOKED_PIRANHA.get()),
                         CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
                 );
             }

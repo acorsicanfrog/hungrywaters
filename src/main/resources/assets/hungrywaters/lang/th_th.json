@@ -1,6 +1,8 @@
 {
   "entity.hungrywaters.piranha": "ปิรันยา",
   "item.hungrywaters.piranha_spawn_egg": "ไข่สร้างปิรันยา",
+  "item.hungrywaters.piranha_raw": "ปิรันยาดิบ",
+  "item.hungrywaters.piranha_cooked": "ปิรันยาปรุงสุก",
 
   "hungrywaters.configuration.title": "การตั้งค่า Hungry Waters",
   "hungrywaters.configuration.section.hungrywaters.common.toml": "การตั้งค่า Hungry Waters",
