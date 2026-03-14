@@ -99,7 +99,7 @@ public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
     public void setupAnim(PiranhaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.root().getAllParts().forEach(ModelPart::resetPose);
 
-        float defaultSpeed = Mth.lerp(Math.min(limbSwingAmount * 5.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
+        float defaultSpeed = Mth.lerp(Math.min(limbSwingAmount * 10.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
         
         animateScaled(entity.swimDefaultAnimationState, PiranhaAnimation.SWIM_DEFAULT, ageInTicks, defaultSpeed, ANIM_SCALE);
         animateScaled(entity.swimAttackAnimationState, PiranhaAnimation.SWIM_ATTACK, ageInTicks, ANIM_SPEED_ATTACK, ANIM_SCALE);
