@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Foame",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Setări foame",
   "hungrywaters.configuration.hungerMax": "Foame maximă",
-  "hungrywaters.configuration.hungerDrainRate": "Rată de scădere a foamei"
+  "hungrywaters.configuration.hungerDrainRate": "Rată de scădere a foamei",
+  "hungrywaters.configuration.alwaysAggressive": "Mereu agresiv"
 }

@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "배고픔",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "배고픔 설정",
   "hungrywaters.configuration.hungerMax": "최대 배고픔",
-  "hungrywaters.configuration.hungerDrainRate": "배고픔 소모 속도"
+  "hungrywaters.configuration.hungerDrainRate": "배고픔 소모 속도",
+  "hungrywaters.configuration.alwaysAggressive": "항상 공격적"
 }

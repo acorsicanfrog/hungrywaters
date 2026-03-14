@@ -13,6 +13,7 @@ public class Config {
     public static final ModConfigSpec.DoubleValue MAX_HEALTH;
 
     // Hunger settings
+    public static final ModConfigSpec.BooleanValue ALWAYS_AGGRESSIVE;
     public static final ModConfigSpec.IntValue HUNGER_MAX;
     public static final ModConfigSpec.IntValue HUNGER_DRAIN_RATE;
 
@@ -44,6 +45,10 @@ public class Config {
         BUILDER.pop();
 
         BUILDER.push("hunger");
+
+        ALWAYS_AGGRESSIVE = BUILDER
+                .comment("When enabled, piranhas are always in frenzy mode and will attack any nearby entity, bypassing the hunger system entirely.")
+                .define("alwaysAggressive", false);
 
         HUNGER_MAX = BUILDER
                 .comment("Maximum hunger value for a piranha (in ticks). When hunger reaches 0, piranhas enter attack mode.")

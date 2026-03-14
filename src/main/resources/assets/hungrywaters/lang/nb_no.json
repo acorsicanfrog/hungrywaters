@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Sult",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Sultinnstillinger",
   "hungrywaters.configuration.hungerMax": "Maks. sult",
-  "hungrywaters.configuration.hungerDrainRate": "Sulttømmingsrate"
+  "hungrywaters.configuration.hungerDrainRate": "Sulttømmingsrate",
+  "hungrywaters.configuration.alwaysAggressive": "Alltid aggressiv"
 }

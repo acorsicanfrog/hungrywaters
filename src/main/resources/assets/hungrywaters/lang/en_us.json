@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Hunger",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Hunger Settings",
   "hungrywaters.configuration.hungerMax": "Max Hunger",
-  "hungrywaters.configuration.hungerDrainRate": "Hunger Drain Rate"
+  "hungrywaters.configuration.hungerDrainRate": "Hunger Drain Rate",
+  "hungrywaters.configuration.alwaysAggressive": "Always Aggressive"
 }

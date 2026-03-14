@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Глад",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Настройки на глада",
   "hungrywaters.configuration.hungerMax": "Макс. глад",
-  "hungrywaters.configuration.hungerDrainRate": "Скорост на изчерпване на глада"
+  "hungrywaters.configuration.hungerDrainRate": "Скорост на изчерпване на глада",
+  "hungrywaters.configuration.alwaysAggressive": "Винаги агресивен"
 }

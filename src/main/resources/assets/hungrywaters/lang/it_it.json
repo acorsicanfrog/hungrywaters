@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Fame",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Impostazioni della fame",
   "hungrywaters.configuration.hungerMax": "Fame massima",
-  "hungrywaters.configuration.hungerDrainRate": "Velocità di esaurimento della fame"
+  "hungrywaters.configuration.hungerDrainRate": "Velocità di esaurimento della fame",
+  "hungrywaters.configuration.alwaysAggressive": "Sempre aggressivo"
 }

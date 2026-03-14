@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Πείνα",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Ρυθμίσεις πείνας",
   "hungrywaters.configuration.hungerMax": "Μέγιστη πείνα",
-  "hungrywaters.configuration.hungerDrainRate": "Ρυθμός εξάντλησης πείνας"
+  "hungrywaters.configuration.hungerDrainRate": "Ρυθμός εξάντλησης πείνας",
+  "hungrywaters.configuration.alwaysAggressive": "Πάντα επιθετικός"
 }

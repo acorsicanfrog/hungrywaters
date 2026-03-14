@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Głód",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Ustawienia głodu",
   "hungrywaters.configuration.hungerMax": "Maks. głód",
-  "hungrywaters.configuration.hungerDrainRate": "Tempo wyczerpywania głodu"
+  "hungrywaters.configuration.hungerDrainRate": "Tempo wyczerpywania głodu",
+  "hungrywaters.configuration.alwaysAggressive": "Zawsze agresywny"
 }

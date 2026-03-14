@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Kelaparan",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Pengaturan Kelaparan",
   "hungrywaters.configuration.hungerMax": "Kelaparan Maks",
-  "hungrywaters.configuration.hungerDrainRate": "Tingkat Pengosongan Kelaparan"
+  "hungrywaters.configuration.hungerDrainRate": "Tingkat Pengosongan Kelaparan",
+  "hungrywaters.configuration.alwaysAggressive": "Selalu Agresif"
 }

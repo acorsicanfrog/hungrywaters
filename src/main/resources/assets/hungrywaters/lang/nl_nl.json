@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Honger",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Hongerinstellingen",
   "hungrywaters.configuration.hungerMax": "Max. honger",
-  "hungrywaters.configuration.hungerDrainRate": "Hongerafnamesnelheid"
+  "hungrywaters.configuration.hungerDrainRate": "Hongerafnamesnelheid",
+  "hungrywaters.configuration.alwaysAggressive": "Altijd agressief"
 }

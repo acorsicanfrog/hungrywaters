@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "الجوع",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "إعدادات الجوع",
   "hungrywaters.configuration.hungerMax": "أقصى جوع",
-  "hungrywaters.configuration.hungerDrainRate": "معدل استنزاف الجوع"
+  "hungrywaters.configuration.hungerDrainRate": "معدل استنزاف الجوع",
+  "hungrywaters.configuration.alwaysAggressive": "عدواني دائمًا"
 }

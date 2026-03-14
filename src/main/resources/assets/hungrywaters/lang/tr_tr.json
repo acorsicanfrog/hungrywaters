@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Açlık",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Açlık Ayarları",
   "hungrywaters.configuration.hungerMax": "Maks. Açlık",
-  "hungrywaters.configuration.hungerDrainRate": "Açlık Tükenme Hızı"
+  "hungrywaters.configuration.hungerDrainRate": "Açlık Tükenme Hızı",
+  "hungrywaters.configuration.alwaysAggressive": "Her Zaman Saldırgan"
 }

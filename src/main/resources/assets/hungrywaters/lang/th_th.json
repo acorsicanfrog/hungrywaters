@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "ความหิว",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "การตั้งค่าความหิว",
   "hungrywaters.configuration.hungerMax": "ความหิวสูงสุด",
-  "hungrywaters.configuration.hungerDrainRate": "อัตราการลดลงของความหิว"
+  "hungrywaters.configuration.hungerDrainRate": "อัตราการลดลงของความหิว",
+  "hungrywaters.configuration.alwaysAggressive": "ก้าวร้าวตลอดเวลา"
 }

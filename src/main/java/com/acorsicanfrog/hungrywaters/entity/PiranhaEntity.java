@@ -36,6 +36,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
@@ -49,6 +50,9 @@ public class PiranhaEntity extends AbstractFish {
     private int hungerTickCounter = 0;
     private int retaliationTimer = 0;
     private int biteCounter = 0;
+
+    public final AnimationState swimDefaultAnimationState = new AnimationState();
+    public final AnimationState swimAttackAnimationState = new AnimationState();
 
     private static final int RETALIATION_DURATION = 600; // 30 seconds
     private static final int BITES_TO_SATISFY = 4;
@@ -142,6 +146,35 @@ public class PiranhaEntity extends AbstractFish {
     }
 
     @Override
+    public void tick() {
+        super.tick();
+        if (this.level().isClientSide) {
+            if (this.isAggressive()) {
+                this.swimDefaultAnimationState.stop();
+                this.swimAttackAnimationState.startIfStopped(this.tickCount);
+
+                // Water particle trail when hunting
+                if (this.isInWater() && this.tickCount % 2 == 0) {
+                    Vec3 motion = this.getDeltaMovement();
+                    double x = this.getX() + (this.random.nextDouble() - 0.5) * 0.2;
+                    double y = this.getY() + this.random.nextDouble() * this.getBbHeight();
+                    double z = this.getZ() + (this.random.nextDouble() - 0.5) * 0.2;
+                    this.level().addParticle(
+                        net.minecraft.core.particles.ParticleTypes.BUBBLE,
+                        x, y, z,
+                        -motion.x * 0.3,
+                        -motion.y * 0.3 + 0.02,
+                        -motion.z * 0.3
+                    );
+                }
+            } else {
+                this.swimAttackAnimationState.stop();
+                this.swimDefaultAnimationState.startIfStopped(this.tickCount);
+            }
+        }
+    }
+
+    @Override
     public void aiStep() {
         super.aiStep();
         if (!this.level().isClientSide) {
@@ -206,7 +239,7 @@ public class PiranhaEntity extends AbstractFish {
     }
 
     public boolean isHungry() {
-        return getHunger() <= 0;
+        return Config.ALWAYS_AGGRESSIVE.getAsBoolean() || getHunger() <= 0;
     }
 
     public boolean isAggressive() {

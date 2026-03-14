@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Fome",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Definições de Fome",
   "hungrywaters.configuration.hungerMax": "Fome Máxima",
-  "hungrywaters.configuration.hungerDrainRate": "Taxa de Redução de Fome"
+  "hungrywaters.configuration.hungerDrainRate": "Taxa de Redução de Fome",
+  "hungrywaters.configuration.alwaysAggressive": "Sempre Agressivo"
 }

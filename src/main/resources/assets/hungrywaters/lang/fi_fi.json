@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "Nälkä",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "Nälän asetukset",
   "hungrywaters.configuration.hungerMax": "Maks. nälkä",
-  "hungrywaters.configuration.hungerDrainRate": "Nälän vähenemisvauhti"
+  "hungrywaters.configuration.hungerDrainRate": "Nälän vähenemisvauhti",
+  "hungrywaters.configuration.alwaysAggressive": "Aina aggressiivinen"
 }

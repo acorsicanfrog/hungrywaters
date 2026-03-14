@@ -17,5 +17,6 @@
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger": "飢餓",
   "hungrywaters.configuration.section.hungrywaters.common.toml.hunger.title": "飢餓設定",
   "hungrywaters.configuration.hungerMax": "最大飢餓值",
-  "hungrywaters.configuration.hungerDrainRate": "飢餓消耗速率"
+  "hungrywaters.configuration.hungerDrainRate": "飢餓消耗速率",
+  "hungrywaters.configuration.alwaysAggressive": "始終攻擊"
 }
