@@ -3,16 +3,20 @@ package com.acorsicanfrog.hungrywaters.entity;
 import com.acorsicanfrog.hungrywaters.Config;
 import com.acorsicanfrog.hungrywaters.HungryWaters;
 
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,8 +36,11 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.AbstractFish;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.entity.AnimationState;
@@ -310,7 +317,39 @@ public class PiranhaEntity extends AbstractFish {
 
     @Override
     public ItemStack getBucketItemStack() {
-        return new ItemStack(Items.COD_BUCKET);
+        return new ItemStack(HungryWaters.PIRANHA_BUCKET.get());
+    }
+
+    @Override
+    protected InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack held = player.getItemInHand(hand);
+        if (held.is(Items.BUCKET) && this.isAlive() && this.isInWater()) {
+            this.playSound(this.getPickupSound(), 1.0F, 1.0F);
+            ItemStack bucketStack = this.getBucketItemStack();
+            this.saveToBucketTag(bucketStack);
+            ItemStack result = ItemUtils.createFilledResult(held, player, bucketStack, false);
+            player.setItemInHand(hand, result);
+            if (!this.level().isClientSide) {
+                CriteriaTriggers.FILLED_BUCKET.trigger((ServerPlayer) player, bucketStack);
+            }
+            this.discard();
+            return InteractionResult.sidedSuccess(this.level().isClientSide);
+        }
+        return super.mobInteract(player, hand);
+    }
+
+    @Override
+    public void saveToBucketTag(ItemStack bucket) {
+        super.saveToBucketTag(bucket);
+        CustomData.update(DataComponents.BUCKET_ENTITY_DATA, bucket, tag -> tag.putInt("Hunger", getHunger()));
+    }
+
+    @Override
+    public void loadFromBucketTag(net.minecraft.nbt.CompoundTag tag) {
+        super.loadFromBucketTag(tag);
+        if (tag.contains("Hunger")) {
+            setHunger(tag.getInt("Hunger"));
+        }
     }
 
     @Override

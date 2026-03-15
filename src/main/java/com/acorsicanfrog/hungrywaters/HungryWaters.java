@@ -6,6 +6,7 @@ import com.acorsicanfrog.hungrywaters.entity.PiranhaEntity;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacementTypes;
@@ -15,7 +16,9 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.MobBucketItem;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.material.Fluids;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -49,7 +52,7 @@ public class HungryWaters {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
     public static final DeferredHolder<Item, DeferredSpawnEggItem> PIRANHA_SPAWN_EGG = ITEMS.register("piranha_spawn_egg",
-            () -> new DeferredSpawnEggItem(PIRANHA, 0x4A6741, 0xC94040, new Item.Properties()));
+            () -> new DeferredSpawnEggItem(PIRANHA, 0, 0, new Item.Properties()));
 
     public static final DeferredHolder<Item, Item> RAW_PIRANHA = ITEMS.register("piranha_raw",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
@@ -62,6 +65,9 @@ public class HungryWaters {
                     .nutrition(5)
                     .saturationModifier(0.6F)
                     .build())));
+
+    public static final DeferredHolder<Item, MobBucketItem> PIRANHA_BUCKET = ITEMS.register("piranha_bucket",
+            () -> new MobBucketItem(PIRANHA.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
 
     public HungryWaters(IEventBus modEventBus, ModContainer modContainer) {
         ENTITY_TYPES.register(modEventBus);
@@ -101,6 +107,13 @@ public class HungryWaters {
                 event.insertAfter(
                         new ItemStack(Items.PIGLIN_BRUTE_SPAWN_EGG),
                         new ItemStack(PIRANHA_SPAWN_EGG.get()),
+                        CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
+                );
+            }
+            if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+                event.insertAfter(
+                        new ItemStack(Items.SALMON_BUCKET),
+                        new ItemStack(PIRANHA_BUCKET.get()),
                         CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS
                 );
             }
