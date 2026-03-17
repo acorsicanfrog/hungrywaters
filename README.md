@@ -13,20 +13,16 @@ A school of piranhas will spawn randomly in either swamp biomes, or river biomes
 - Piranhas will only spawn in river or swamp water biomes.
 
 ## Configuration
-The mod includes a configurable file allowing you to:
-- Adjust the bite damage
-- Adjust the swimming speed
-- Adjust the health amount
-- Adjust the size of piranhas (min/max)
-- Adjust the hunger amount
-- Adjust the hunger drain (how fast they become hungry)
+The mod includes a config file allowing you to tweak many things!
 
 ## Datapack
 Spawn frequency and school size can be customized via datapack, as these values are loaded from a biome modifier file.
 
 ## Compatibility
-Designed for broad compatibility with other animal-related mods.
 Has native support for [Nature's Spirit](https://modrinth.com/mod/natures-spirit) as well as [Biomes O' Plenty](https://modrinth.com/mod/biomes-o-plenty)
+
+## Credits
+@Howitzer made all of the art (model/textures/animations).
 
 
 ## Bug report

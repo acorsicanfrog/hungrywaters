@@ -2,6 +2,7 @@ package com.acorsicanfrog.hungrywaters;
 
 import com.acorsicanfrog.hungrywaters.client.PiranhaModel;
 import com.acorsicanfrog.hungrywaters.client.PiranhaRenderer;
+
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
