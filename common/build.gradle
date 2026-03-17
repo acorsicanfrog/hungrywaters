@@ -1,0 +1,3 @@
+// Common module — source-only.
+// Sources are compiled by platform subprojects (neoforge, fabric) via sourceSets.srcDir.
+// No plugins or dependencies needed here.

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "hungrywaters",
+  "version": "${version}",
+  "name": "Hungry Waters",
+  "description": "Bringing piranhas to Minecraft.",
+  "authors": ["A Corsican Frog"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/hungry-waters",
+    "issues": "https://github.com/acorsicanfrog/hungrywaters/issues",
+    "sources": "https://github.com/acorsicanfrog/hungrywaters"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/hungrywaters/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.acorsicanfrog.hungrywaters.HungryWatersFabric"
+    ],
+    "client": [
+      "com.acorsicanfrog.hungrywaters.HungryWatersFabricClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "fabric-api": ">=0.102.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  }
+}

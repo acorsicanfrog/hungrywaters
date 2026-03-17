@@ -1,10 +1,11 @@
 {
   "homepage": "https://modrinth.com/mod/hungry-waters",
   "1.21.1": {
-    "1.0.0": "Initial release"
+    "1.1.0": "Added Fabric support (as separate JAR). Fixed mod crash when Biomes O' Plenty and Nature's Spirit are not loaded.",
+    "1.0.0": "Initial release."
   },
   "promos": {
-    "1.21.1-recommended": "1.0.0",
-    "1.21.1-latest": "1.0.0"
+    "1.21.1-recommended": "1.1.0",
+    "1.21.1-latest": "1.1.0"
   }
 }
