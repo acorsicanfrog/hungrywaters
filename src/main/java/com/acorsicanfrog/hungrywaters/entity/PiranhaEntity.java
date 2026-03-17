@@ -155,7 +155,7 @@ public class PiranhaEntity extends AbstractFish {
 
         this.targetSelector.addGoal(0, new PiranhaRetaliateGoal(this));
         this.targetSelector.addGoal(1, new PiranhaHuntGoal<>(this, AbstractFish.class, target -> !(target instanceof PiranhaEntity)));
-        this.targetSelector.addGoal(2, new PiranhaHuntGoal<>(this, Player.class, target -> true));
+        this.targetSelector.addGoal(2, new PiranhaHuntGoal<>(this, Player.class, target -> !(target instanceof Player p && p.getVehicle() instanceof net.minecraft.world.entity.vehicle.Boat)));
         this.targetSelector.addGoal(3, new PiranhaHuntGoal<>(this, Animal.class, target -> true));
     }
 
