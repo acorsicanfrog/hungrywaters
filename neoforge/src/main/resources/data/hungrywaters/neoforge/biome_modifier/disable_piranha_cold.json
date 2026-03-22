@@ -1,0 +1,7 @@
+{
+  "type": "neoforge:remove_spawns",
+  "biomes": "#c:is_cold",
+  "entity_types": [
+    "hungrywaters:piranha"
+  ]
+}

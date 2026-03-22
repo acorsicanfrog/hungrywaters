@@ -1,11 +1,12 @@
 {
   "homepage": "https://modrinth.com/mod/hungry-waters",
   "1.21.1": {
+    "1.2.0": "Improved modded biomes support. Increased piranhas spawn weight to allow them to spawn when Acquaculture is installed. Piranhas will no longer spawn in cold biomes.",
     "1.1.0": "Added Fabric support (as separate JAR). Fixed mod crash when Biomes O' Plenty and Nature's Spirit are not loaded.",
     "1.0.0": "Initial release."
   },
   "promos": {
-    "1.21.1-recommended": "1.1.0",
-    "1.21.1-latest": "1.1.0"
+    "1.21.1-recommended": "1.2.0",
+    "1.21.1-latest": "1.2.0"
   }
 }
