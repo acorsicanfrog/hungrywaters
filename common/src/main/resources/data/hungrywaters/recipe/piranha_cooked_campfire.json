@@ -1,9 +1,7 @@
 {
   "type": "minecraft:campfire_cooking",
   "category": "food",
-  "ingredient": {
-    "item": "hungrywaters:piranha_raw"
-  },
+  "ingredient": "hungrywaters:piranha_raw",
   "result": {
     "id": "hungrywaters:piranha_cooked"
   },

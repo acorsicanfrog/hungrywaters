@@ -3,47 +3,43 @@ package com.acorsicanfrog.hungrywaters.entity;
 import com.acorsicanfrog.hungrywaters.HungryWatersCommon;
 import com.acorsicanfrog.hungrywaters.HungryWatersConfig;
 
-import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.AnimationState;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.ai.control.SmoothSwimmingLookControl;
 import net.minecraft.world.entity.ai.control.SmoothSwimmingMoveControl;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.AbstractFish;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.fish.AbstractFish;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.component.CustomData;
-import net.minecraft.world.item.ItemUtils;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.entity.AnimationState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
@@ -70,19 +66,19 @@ public class PiranhaEntity extends AbstractFish {
         this.lookControl = new SmoothSwimmingLookControl(this, 10);
     }
 
-    public static boolean checkSpawnRules(EntityType<? extends PiranhaEntity> type, ServerLevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
+    public static boolean checkSpawnRules(EntityType<? extends PiranhaEntity> type, ServerLevelAccessor level, EntitySpawnReason spawnReason, BlockPos pos, RandomSource random) {
         return level.getFluidState(pos).is(net.minecraft.tags.FluidTags.WATER)
                 && level.getBlockState(pos.above()).getFluidState().is(net.minecraft.tags.FluidTags.WATER);
     }
 
-    private static final ResourceLocation SCALE_MODIFIER_ID =
-            ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_scale");
-    private static final ResourceLocation HEALTH_MODIFIER_ID =
-            ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_health");
-    private static final ResourceLocation SPEED_MODIFIER_ID =
-            ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_speed");
-    private static final ResourceLocation DAMAGE_MODIFIER_ID =
-            ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_damage");
+    private static final Identifier SCALE_MODIFIER_ID =
+            Identifier.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_scale");
+    private static final Identifier HEALTH_MODIFIER_ID =
+            Identifier.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_health");
+    private static final Identifier SPEED_MODIFIER_ID =
+            Identifier.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_speed");
+    private static final Identifier DAMAGE_MODIFIER_ID =
+            Identifier.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_damage");
 
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
@@ -96,8 +92,8 @@ public class PiranhaEntity extends AbstractFish {
     @Override
     @Nullable
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty,
-                                         MobSpawnType spawnType, @Nullable SpawnGroupData groupData) {
-        SpawnGroupData data = super.finalizeSpawn(level, difficulty, spawnType, groupData);
+                                         EntitySpawnReason spawnReason, @Nullable SpawnGroupData groupData) {
+        SpawnGroupData data = super.finalizeSpawn(level, difficulty, spawnReason, groupData);
 
         double min = HungryWatersConfig.scaleMin;
         double max = HungryWatersConfig.scaleMax;
@@ -151,14 +147,14 @@ public class PiranhaEntity extends AbstractFish {
 
         this.targetSelector.addGoal(0, new PiranhaRetaliateGoal(this));
         this.targetSelector.addGoal(1, new PiranhaHuntGoal<>(this, AbstractFish.class, target -> !(target instanceof PiranhaEntity)));
-        this.targetSelector.addGoal(2, new PiranhaHuntGoal<>(this, Player.class, target -> !(target instanceof Player p && p.getVehicle() instanceof net.minecraft.world.entity.vehicle.Boat)));
+        this.targetSelector.addGoal(2, new PiranhaHuntGoal<>(this, Player.class, target -> !(target instanceof Player p && p.getVehicle() instanceof net.minecraft.world.entity.vehicle.boat.Boat)));
         this.targetSelector.addGoal(3, new PiranhaHuntGoal<>(this, Animal.class, target -> true));
     }
 
     @Override
     public void tick() {
         super.tick();
-        if (this.level().isClientSide) {
+        if (this.level().isClientSide()) {
             if (this.isAggressive()) {
                 this.swimDefaultAnimationState.stop();
                 this.swimAttackAnimationState.startIfStopped(this.tickCount);
@@ -186,7 +182,7 @@ public class PiranhaEntity extends AbstractFish {
     @Override
     public void aiStep() {
         super.aiStep();
-        if (!this.level().isClientSide) {
+        if (!this.level().isClientSide()) {
             drainHunger();
             tickRetaliation();
             setAggressive(this.getTarget() != null);
@@ -211,15 +207,11 @@ public class PiranhaEntity extends AbstractFish {
     }
 
     @Override
-    public void travel(Vec3 travelVector) {
-        if (this.isEffectiveAi() && this.isInWater()) {
-            float speed = this.getTarget() != null ? 0.04F : 0.02F;
-            this.moveRelative(speed, travelVector);
-            this.move(MoverType.SELF, this.getDeltaMovement());
-            this.setDeltaMovement(this.getDeltaMovement().scale(0.9));
-        } else {
-            super.travel(travelVector);
-        }
+    protected void travelInWater(Vec3 travelVector, double gravity, boolean isFalling, double fallSpeed) {
+        float speed = this.getTarget() != null ? 0.04F : 0.02F;
+        this.moveRelative(speed, travelVector);
+        this.move(MoverType.SELF, this.getDeltaMovement());
+        this.setDeltaMovement(this.getDeltaMovement().scale(0.9));
     }
 
     private void drainHunger() {
@@ -257,8 +249,8 @@ public class PiranhaEntity extends AbstractFish {
     }
 
     @Override
-    public boolean doHurtTarget(net.minecraft.world.entity.Entity target) {
-        boolean result = super.doHurtTarget(target);
+    public boolean doHurtTarget(net.minecraft.server.level.ServerLevel level, net.minecraft.world.entity.Entity target) {
+        boolean result = super.doHurtTarget(level, target);
         if (result) {
             biteCounter++;
             if ((target instanceof LivingEntity living && living.isDeadOrDying()) || biteCounter >= BITES_TO_SATISFY) {
@@ -270,8 +262,8 @@ public class PiranhaEntity extends AbstractFish {
     }
 
     @Override
-    public boolean hurt(DamageSource source, float amount) {
-        boolean result = super.hurt(source, amount);
+    public boolean hurtServer(net.minecraft.server.level.ServerLevel level, DamageSource source, float amount) {
+        boolean result = super.hurtServer(level, source, amount);
         if (result && source.getEntity() instanceof LivingEntity attacker) {
             this.setTarget(attacker);
             this.retaliationTimer = RETALIATION_DURATION;
@@ -280,52 +272,26 @@ public class PiranhaEntity extends AbstractFish {
     }
 
     @Override
-    public void addAdditionalSaveData(CompoundTag compound) {
-        super.addAdditionalSaveData(compound);
-        compound.putInt("Hunger", getHunger());
-        compound.putInt("HungerTickCounter", hungerTickCounter);
-        compound.putInt("RetaliationTimer", retaliationTimer);
-        compound.putInt("BiteCounter", biteCounter);
+    protected void addAdditionalSaveData(ValueOutput output) {
+        super.addAdditionalSaveData(output);
+        output.putInt("Hunger", getHunger());
+        output.putInt("HungerTickCounter", hungerTickCounter);
+        output.putInt("RetaliationTimer", retaliationTimer);
+        output.putInt("BiteCounter", biteCounter);
     }
 
     @Override
-    public void readAdditionalSaveData(CompoundTag compound) {
-        super.readAdditionalSaveData(compound);
-        if (compound.contains("Hunger")) {
-            setHunger(compound.getInt("Hunger"));
-        }
-        if (compound.contains("HungerTickCounter")) {
-            hungerTickCounter = compound.getInt("HungerTickCounter");
-        }
-        if (compound.contains("RetaliationTimer")) {
-            retaliationTimer = compound.getInt("RetaliationTimer");
-        }
-        if (compound.contains("BiteCounter")) {
-            biteCounter = compound.getInt("BiteCounter");
-        }
+    protected void readAdditionalSaveData(ValueInput input) {
+        super.readAdditionalSaveData(input);
+        setHunger(input.getIntOr("Hunger", HungryWatersConfig.hungerMax));
+        hungerTickCounter = input.getIntOr("HungerTickCounter", 0);
+        retaliationTimer = input.getIntOr("RetaliationTimer", 0);
+        biteCounter = input.getIntOr("BiteCounter", 0);
     }
 
     @Override
     public ItemStack getBucketItemStack() {
         return new ItemStack(HungryWatersCommon.PIRANHA_BUCKET_ITEM.get());
-    }
-
-    @Override
-    protected InteractionResult mobInteract(Player player, InteractionHand hand) {
-        ItemStack held = player.getItemInHand(hand);
-        if (held.is(Items.BUCKET) && this.isAlive() && this.isInWater()) {
-            this.playSound(this.getPickupSound(), 1.0F, 1.0F);
-            ItemStack bucketStack = this.getBucketItemStack();
-            this.saveToBucketTag(bucketStack);
-            ItemStack result = ItemUtils.createFilledResult(held, player, bucketStack, false);
-            player.setItemInHand(hand, result);
-            if (!this.level().isClientSide) {
-                CriteriaTriggers.FILLED_BUCKET.trigger((ServerPlayer) player, bucketStack);
-            }
-            this.discard();
-            return InteractionResult.sidedSuccess(this.level().isClientSide);
-        }
-        return super.mobInteract(player, hand);
     }
 
     @Override
@@ -337,9 +303,7 @@ public class PiranhaEntity extends AbstractFish {
     @Override
     public void loadFromBucketTag(CompoundTag tag) {
         super.loadFromBucketTag(tag);
-        if (tag.contains("Hunger")) {
-            setHunger(tag.getInt("Hunger"));
-        }
+        tag.getInt("Hunger").ifPresent(this::setHunger);
     }
 
     @Override
@@ -395,7 +359,7 @@ public class PiranhaEntity extends AbstractFish {
     static class PiranhaHuntGoal<T extends LivingEntity> extends NearestAttackableTargetGoal<T> {
         public PiranhaHuntGoal(PiranhaEntity piranha, Class<T> targetType, java.util.function.Predicate<LivingEntity> extraFilter) {
             super(piranha, targetType, 10, true, false,
-                    target -> target.isInWater() && extraFilter.test(target));
+                    (target, level) -> target.isInWater() && extraFilter.test(target));
         }
 
         @Override

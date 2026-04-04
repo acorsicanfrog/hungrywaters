@@ -6,6 +6,7 @@ import com.acorsicanfrog.hungrywaters.entity.PiranhaEntity;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -17,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.MobBucketItem;
+import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.bus.api.IEventBus;
@@ -26,7 +28,6 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
@@ -43,31 +44,31 @@ public class HungryWatersNeoForge {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(Registries.ENTITY_TYPE, HungryWatersCommon.MODID);
 
     public static final DeferredHolder<EntityType<?>, EntityType<PiranhaEntity>> PIRANHA = ENTITY_TYPES.register("piranha",
-            () -> EntityType.Builder.of(PiranhaEntity::new, MobCategory.WATER_AMBIENT)
+            key -> EntityType.Builder.of(PiranhaEntity::new, MobCategory.WATER_AMBIENT)
                     .sized(0.5F, 0.3F)
                     .clientTrackingRange(8)
-                    .build("piranha"));
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, key)));
 
     // Items
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(HungryWatersCommon.MODID);
 
-    public static final DeferredHolder<Item, DeferredSpawnEggItem> PIRANHA_SPAWN_EGG = ITEMS.register("piranha_spawn_egg",
-            () -> new DeferredSpawnEggItem(PIRANHA, 0, 0, new Item.Properties()));
+    public static final DeferredHolder<Item, SpawnEggItem> PIRANHA_SPAWN_EGG = ITEMS.registerItem("piranha_spawn_egg",
+            props -> new SpawnEggItem(props.spawnEgg(PIRANHA.get())));
 
-    public static final DeferredHolder<Item, Item> RAW_PIRANHA = ITEMS.register("piranha_raw",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+    public static final DeferredHolder<Item, Item> RAW_PIRANHA = ITEMS.registerItem("piranha_raw",
+            props -> new Item(props.food(new FoodProperties.Builder()
                     .nutrition(2)
                     .saturationModifier(0.1F)
                     .build())));
 
-    public static final DeferredHolder<Item, Item> COOKED_PIRANHA = ITEMS.register("piranha_cooked",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+    public static final DeferredHolder<Item, Item> COOKED_PIRANHA = ITEMS.registerItem("piranha_cooked",
+            props -> new Item(props.food(new FoodProperties.Builder()
                     .nutrition(5)
                     .saturationModifier(0.6F)
                     .build())));
 
-    public static final DeferredHolder<Item, MobBucketItem> PIRANHA_BUCKET = ITEMS.register("piranha_bucket",
-            () -> new MobBucketItem(PIRANHA.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
+    public static final DeferredHolder<Item, MobBucketItem> PIRANHA_BUCKET = ITEMS.registerItem("piranha_bucket",
+            props -> new MobBucketItem(PIRANHA.get(), Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, props.stacksTo(1)));
 
     public HungryWatersNeoForge(IEventBus modEventBus, ModContainer modContainer) {
         ENTITY_TYPES.register(modEventBus);

@@ -1,38 +1,33 @@
 package com.acorsicanfrog.hungrywaters.client;
 
 import com.acorsicanfrog.hungrywaters.HungryWatersCommon;
-import com.acorsicanfrog.hungrywaters.entity.PiranhaEntity;
 
-import net.minecraft.client.animation.KeyframeAnimations;
-import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.animation.KeyframeAnimation;
+import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.AnimationState;
-import org.joml.Vector3f;
 
-public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
+public class PiranhaModel extends EntityModel<PiranhaRenderState> {
 
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-            ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha"), "main");
-
-    private static final Vector3f ANIM_VEC = new Vector3f();
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(Identifier.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha"), "main"); 
 
     private static final float ANIM_SPEED_IDLE = 1.0F;
     private static final float ANIM_SPEED_SWIM = 2.0F;
     private static final float ANIM_SPEED_ATTACK = 4.0F;
-    
-    private static final float ANIM_SCALE = 1.5F;
 
-    private final ModelPart root;
     private final ModelPart bone;
+    private final KeyframeAnimation swimDefaultAnimation;
+    private final KeyframeAnimation swimAttackAnimation;
 
     public PiranhaModel(ModelPart root) {
-        this.root = root;
+        super(root);
         this.bone = root.getChild("bone");
+        this.swimDefaultAnimation = PiranhaAnimation.SWIM_DEFAULT.bake(root);
+        this.swimAttackAnimation = PiranhaAnimation.SWIM_ATTACK.bake(root);
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -84,26 +79,16 @@ public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
     }
 
     @Override
-    public ModelPart root() {
-        return this.root;
-    }
+    public void setupAnim(PiranhaRenderState state) {
+        super.setupAnim(state);
 
-    @Override
-    public void setupAnim(PiranhaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.root().getAllParts().forEach(ModelPart::resetPose);
+        float defaultSpeed = Mth.lerp(Math.min(state.walkAnimationSpeed * 10.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
 
-        float defaultSpeed = Mth.lerp(Math.min(limbSwingAmount * 10.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
-        
-        animateScaled(entity.swimDefaultAnimationState, PiranhaAnimation.SWIM_DEFAULT, ageInTicks, defaultSpeed, ANIM_SCALE);
-        animateScaled(entity.swimAttackAnimationState, PiranhaAnimation.SWIM_ATTACK, ageInTicks, ANIM_SPEED_ATTACK, ANIM_SCALE);
+        this.swimDefaultAnimation.apply(state.swimDefaultAnimationState, state.ageInTicks, defaultSpeed);
+        this.swimAttackAnimation.apply(state.swimAttackAnimationState, state.ageInTicks, ANIM_SPEED_ATTACK);
 
-        if (!entity.isInWater()) {
-            this.bone.zRot = Mth.sin(0.6F * ageInTicks) * 0.7F;
+        if (!state.isInWater) {
+            this.bone.zRot = Mth.sin(0.6F * state.ageInTicks) * 0.7F;
         }
-    }
-
-    private void animateScaled(AnimationState state, net.minecraft.client.animation.AnimationDefinition definition, float ageInTicks, float speed, float scale) {
-        state.updateTime(ageInTicks, speed);
-        state.ifStarted(s -> KeyframeAnimations.animate(this, definition, s.getAccumulatedTime(), scale, ANIM_VEC));
     }
 }
