@@ -9,4 +9,6 @@ public class PiranhaRenderState extends LivingEntityRenderState
 
     public final AnimationState swimDefaultAnimationState = new AnimationState();
     public final AnimationState swimAttackAnimationState = new AnimationState();
+
+    public float currentAnimSpeed = 1.0F;
 }

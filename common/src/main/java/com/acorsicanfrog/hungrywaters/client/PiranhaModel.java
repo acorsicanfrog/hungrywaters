@@ -82,9 +82,10 @@ public class PiranhaModel extends EntityModel<PiranhaRenderState> {
     public void setupAnim(PiranhaRenderState state) {
         super.setupAnim(state);
 
-        float defaultSpeed = Mth.lerp(Math.min(state.walkAnimationSpeed * 10.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
+        float targetSpeed = Mth.lerp(Math.min(state.walkAnimationSpeed * 10.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
+        state.currentAnimSpeed = Mth.lerp(0.1F, state.currentAnimSpeed, targetSpeed);
 
-        this.swimDefaultAnimation.apply(state.swimDefaultAnimationState, state.ageInTicks, defaultSpeed);
+        this.swimDefaultAnimation.apply(state.swimDefaultAnimationState, state.ageInTicks, state.currentAnimSpeed);
         this.swimAttackAnimation.apply(state.swimAttackAnimationState, state.ageInTicks, ANIM_SPEED_ATTACK);
 
         if (!state.isInWater) {

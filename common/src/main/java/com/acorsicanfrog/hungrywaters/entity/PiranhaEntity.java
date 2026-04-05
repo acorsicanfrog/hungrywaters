@@ -62,7 +62,7 @@ public class PiranhaEntity extends AbstractFish {
 
     public PiranhaEntity(EntityType<? extends AbstractFish> entityType, Level level) {
         super(entityType, level);
-        this.moveControl = new SmoothSwimmingMoveControl(this, 85, 10, 0.1F, 0.5F, false);
+        this.moveControl = new SmoothSwimmingMoveControl(this, 85, 10, 0.1F, 0.5F, true);
         this.lookControl = new SmoothSwimmingLookControl(this, 10);
     }
 
@@ -212,6 +212,9 @@ public class PiranhaEntity extends AbstractFish {
         this.moveRelative(speed, travelVector);
         this.move(MoverType.SELF, this.getDeltaMovement());
         this.setDeltaMovement(this.getDeltaMovement().scale(0.9));
+        if (this.getTarget() == null) {
+            this.setDeltaMovement(this.getDeltaMovement().add(0.0, -0.005, 0.0));
+        }
     }
 
     private void drainHunger() {
