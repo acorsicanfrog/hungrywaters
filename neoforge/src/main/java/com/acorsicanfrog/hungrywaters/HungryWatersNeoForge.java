@@ -24,7 +24,6 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
@@ -66,8 +65,6 @@ public class HungryWatersNeoForge {
     public HungryWatersNeoForge(IEventBus modEventBus, ModContainer modContainer) {
         ENTITY_TYPES.register(modEventBus);
         ITEMS.register(modEventBus);
-
-        NeoForge.EVENT_BUS.register(this);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
 
