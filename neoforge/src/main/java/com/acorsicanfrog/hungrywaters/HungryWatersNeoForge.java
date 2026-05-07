@@ -1,9 +1,6 @@
 package com.acorsicanfrog.hungrywaters;
 
-import org.slf4j.Logger;
-
 import com.acorsicanfrog.hungrywaters.entity.PiranhaEntity;
-import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -28,18 +25,14 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 @Mod(HungryWatersCommon.MODID)
 public class HungryWatersNeoForge {
-    public static final Logger LOGGER = LogUtils.getLogger();
-
     // Entity Types
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(Registries.ENTITY_TYPE, HungryWatersCommon.MODID);
 
@@ -74,8 +67,6 @@ public class HungryWatersNeoForge {
         ENTITY_TYPES.register(modEventBus);
         ITEMS.register(modEventBus);
 
-        NeoForge.EVENT_BUS.register(this);
-
         modContainer.registerConfig(ModConfig.Type.COMMON, NeoForgeConfig.SPEC);
 
         // Wire common bucket reference
@@ -83,11 +74,6 @@ public class HungryWatersNeoForge {
 
         // Listen for config load/reload to sync values to common config holder
         modEventBus.addListener((ModConfigEvent event) -> NeoForgeConfig.syncToCommon());
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Hungry Waters loaded!");
     }
 
     @EventBusSubscriber(modid = HungryWatersCommon.MODID)
