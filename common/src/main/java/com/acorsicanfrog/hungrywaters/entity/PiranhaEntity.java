@@ -71,7 +71,8 @@ public class PiranhaEntity extends AbstractFish {
     }
 
     public static boolean checkSpawnRules(EntityType<? extends PiranhaEntity> type, ServerLevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
-        return level.getFluidState(pos).is(net.minecraft.tags.FluidTags.WATER)
+        return pos.getY() >= 50
+                && level.getFluidState(pos).is(net.minecraft.tags.FluidTags.WATER)
                 && level.getBlockState(pos.above()).getFluidState().is(net.minecraft.tags.FluidTags.WATER);
     }
 
