@@ -1,9 +1,15 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'fabric-loom' version '1.10.5'
 }
 
 base {
     archivesName = "${mod_id}-${minecraft_version}-fabric-${mod_version}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    maven { url = "https://api.modrinth.com/maven" }
 }
 
 // Include common sources

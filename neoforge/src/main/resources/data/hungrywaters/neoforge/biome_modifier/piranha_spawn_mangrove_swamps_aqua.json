@@ -1,14 +1,14 @@
 {
   "type": "neoforge:add_spawns",
     "neoforge:conditions": [
-    { "type": "neoforge:not", "value": { "type": "neoforge:mod_loaded", "modid": "aquaculture" } }
+    { "type": "neoforge:mod_loaded", "modid": "aquaculture" }
   ],
   "biomes": [
-    "minecraft:swamp"
+    "minecraft:mangrove_swamp"
   ],
   "spawners": [{
     "type": "hungrywaters:piranha",
-    "weight": 10,
+    "weight": 20,
     "minCount": 1,
     "maxCount": 5
   }]

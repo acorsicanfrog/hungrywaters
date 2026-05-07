@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "hungrywaters:item/piranha_spawn_egg"
-  }
-}
