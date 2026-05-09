@@ -11,6 +11,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
@@ -29,27 +31,35 @@ import net.minecraft.world.level.material.Fluids;
 
 public class HungryWatersFabric implements ModInitializer {
 
+    private static final ResourceLocation PIRANHA_ID = ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha");
+    private static final ResourceKey<EntityType<?>> PIRANHA_KEY = ResourceKey.create(Registries.ENTITY_TYPE, PIRANHA_ID);
+    private static final ResourceLocation PIRANHA_SPAWN_EGG_ID = ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_spawn_egg");
+
+    private static Item.Properties itemProperties(String path) {
+        return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, path)));
+    }
+
     // Entity Type
     public static final EntityType<PiranhaEntity> PIRANHA = Registry.register(
             BuiltInRegistries.ENTITY_TYPE,
-            ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha"),
+        PIRANHA_ID,
             EntityType.Builder.<PiranhaEntity>of(PiranhaEntity::new, MobCategory.WATER_AMBIENT)
                     .sized(0.5F, 0.3F)
                     .clientTrackingRange(8)
-                    .build("piranha")
+            .build(PIRANHA_KEY)
     );
 
     // Items
     public static final Item PIRANHA_SPAWN_EGG = Registry.register(
             BuiltInRegistries.ITEM,
-            ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_spawn_egg"),
-            new SpawnEggItem(PIRANHA, 0, 0, new Item.Properties())
+            PIRANHA_SPAWN_EGG_ID,
+            new SpawnEggItem(PIRANHA, itemProperties("piranha_spawn_egg"))
     );
 
     public static final Item RAW_PIRANHA = Registry.register(
             BuiltInRegistries.ITEM,
             ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_raw"),
-            new Item(new Item.Properties().food(new FoodProperties.Builder()
+            new Item(itemProperties("piranha_raw").food(new FoodProperties.Builder()
                     .nutrition(2)
                     .saturationModifier(0.1F)
                     .build()))
@@ -58,7 +68,7 @@ public class HungryWatersFabric implements ModInitializer {
     public static final Item COOKED_PIRANHA = Registry.register(
             BuiltInRegistries.ITEM,
             ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_cooked"),
-            new Item(new Item.Properties().food(new FoodProperties.Builder()
+            new Item(itemProperties("piranha_cooked").food(new FoodProperties.Builder()
                     .nutrition(5)
                     .saturationModifier(0.6F)
                     .build()))
@@ -67,7 +77,7 @@ public class HungryWatersFabric implements ModInitializer {
     public static final Item PIRANHA_BUCKET = Registry.register(
             BuiltInRegistries.ITEM,
             ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha_bucket"),
-            new MobBucketItem(PIRANHA, Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1))
+            new MobBucketItem(PIRANHA, Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, itemProperties("piranha_bucket").stacksTo(1))
     );
 
     @Override

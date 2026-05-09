@@ -1,10 +1,9 @@
 package com.acorsicanfrog.hungrywaters.client;
 
 import com.acorsicanfrog.hungrywaters.HungryWatersCommon;
-import com.acorsicanfrog.hungrywaters.entity.PiranhaEntity;
 
 import net.minecraft.client.animation.KeyframeAnimations;
-import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -14,7 +13,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.AnimationState;
 import org.joml.Vector3f;
 
-public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
+public class PiranhaModel extends EntityModel<PiranhaRenderState> {
 
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(HungryWatersCommon.MODID, "piranha"), "main");
@@ -31,6 +30,7 @@ public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
     private final ModelPart bone;
 
     public PiranhaModel(ModelPart root) {
+        super(root);
         this.root = root;
         this.bone = root.getChild("bone");
     }
@@ -84,26 +84,27 @@ public class PiranhaModel extends HierarchicalModel<PiranhaEntity> {
     }
 
     @Override
-    public ModelPart root() {
-        return this.root;
-    }
+    public void setupAnim(PiranhaRenderState renderState) {
+        super.setupAnim(renderState);
+        this.root.getAllParts().forEach(ModelPart::resetPose);
 
-    @Override
-    public void setupAnim(PiranhaEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.root().getAllParts().forEach(ModelPart::resetPose);
+        renderState.swimDefaultAnimationState.ifStarted(ignored -> animateScaled(PiranhaAnimation.SWIM_DEFAULT, renderState.swimAnimationTime, ANIM_SCALE));
+        animateScaled(renderState.swimAttackAnimationState, PiranhaAnimation.SWIM_ATTACK, renderState.ageInTicks, ANIM_SPEED_ATTACK, ANIM_SCALE);
 
-        float defaultSpeed = Mth.lerp(Math.min(limbSwingAmount * 10.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
-        
-        animateScaled(entity.swimDefaultAnimationState, PiranhaAnimation.SWIM_DEFAULT, ageInTicks, defaultSpeed, ANIM_SCALE);
-        animateScaled(entity.swimAttackAnimationState, PiranhaAnimation.SWIM_ATTACK, ageInTicks, ANIM_SPEED_ATTACK, ANIM_SCALE);
-
-        if (!entity.isInWater()) {
-            this.bone.zRot = Mth.sin(0.6F * ageInTicks) * 0.7F;
+        if (!renderState.isInWater) {
+            this.bone.zRot = Mth.sin(0.6F * renderState.ageInTicks) * 0.7F;
         }
     }
 
+    static float getDefaultAnimationSpeed(float walkAnimationSpeed) {
+        return Mth.lerp(Math.min(walkAnimationSpeed * 10.0F, 1.0F), ANIM_SPEED_IDLE, ANIM_SPEED_SWIM);
+    }
+
+    private void animateScaled(net.minecraft.client.animation.AnimationDefinition definition, float animationTime, float scale) {
+        KeyframeAnimations.animate(this, definition, (long) animationTime, scale, ANIM_VEC);
+    }
+
     private void animateScaled(AnimationState state, net.minecraft.client.animation.AnimationDefinition definition, float ageInTicks, float speed, float scale) {
-        state.updateTime(ageInTicks, speed);
-        state.ifStarted(s -> KeyframeAnimations.animate(this, definition, s.getAccumulatedTime(), scale, ANIM_VEC));
+        state.ifStarted(startedState -> KeyframeAnimations.animate(this, definition, (long) (startedState.getTimeInMillis(ageInTicks) * speed), scale, ANIM_VEC));
     }
 }
